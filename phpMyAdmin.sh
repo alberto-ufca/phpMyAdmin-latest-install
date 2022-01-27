@@ -16,6 +16,11 @@ echo $folder
 mv -f /var/www/html/phpmyadmin/$folder/* /var/www/html/phpmyadmin
 rm -R /var/www/html/phpmyadmin/$folder
 mv config.sample.inc.php config.inc.php
+# secret_password="wDdAIJ*@#AU@#(J#fh@(D)_@(#@(JFPK"
 # sed -i "s/\$cfg\['blowfish_secret'\] = ''\;/\$cfg\['blowfish_secret'\] = '$secret_password'\;/" config.inc.php
+sudo service mysql stop
+sudo service mysql start
 sudo mysql_secure_installation
-sudo service apache2 restart
+sudo service apache2 stop
+sudo service apache2 start
+echo "phpMyAdmin was successfully installed. access: yourdomain/phpmyadmin"
