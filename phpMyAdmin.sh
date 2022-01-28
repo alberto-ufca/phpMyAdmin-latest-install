@@ -21,6 +21,9 @@ mv config.sample.inc.php config.inc.php
 sudo service mysql stop
 sudo service mysql start
 sudo mysql_secure_installation
+# CREATE USER 'new_user'@'localhost' IDENTIFIED BY 'password';
+# GRANT ALL PRIVILEGES ON * . * TO 'new_user'@'localhost';
+# FLUSH PRIVILEGES;
 sudo service apache2 stop
 sudo service apache2 start
 echo "phpMyAdmin was successfully installed. access: yourdomain/phpmyadmin"
