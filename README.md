@@ -1,8 +1,12 @@
 ## phpMyAdmin-latest-install
-* Official website **[www.phpmyadmin.net](https://www.phpmyadmin.net/)**
+### Install phpMyAdmin, apache2 and MySQL on Linux
+* Official websites used:
+*  **[phpMyAdmin](https://www.phpmyadmin.net/)**
+*  **[apache2](https://httpd.apache.org/)**
+*  **[MySQL](https://mariadb.org/)**
 ### How to use
 ```bash
-# Open your favourite terminal
+# Open your terminal and log in to a root account
 
 # Clone this repository
 $ git clone https://github.com/meaar/phpMyAdmin-latest-install.git
