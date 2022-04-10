@@ -10,7 +10,7 @@ sudo apt install mariadb-server mariadb-client -y
 sudo wget -P /var/www/html "https://www.phpmyadmin.net/downloads/phpMyAdmin-latest-all-languages.zip"
 sudo unzip -d /var/www/html/phpmyadmin /var/www/html/phpMyAdmin-latest-all-languages.zip
 sudo rm /var/www/html/phpMyAdmin-latest-all-languages.zip
-sudo cd /var/www/html/phpmyadmin
+cd /var/www/html/phpmyadmin
 folder=$(ls)
 echo $folder
 sudo mv -f /var/www/html/phpmyadmin/$folder/* /var/www/html/phpmyadmin
