@@ -10,6 +10,7 @@ sudo apt install mariadb-server mariadb-client -y
 # sudo echo -e "# Fix: AH00076: Failed to enable APR_TCP_DEFER_ACCEPT\nAcceptFilter http none\nAcceptFilter https none\n" >> /etc/apache2/apache2.conf
 wget "https://www.phpmyadmin.net/downloads/phpMyAdmin-latest-all-languages.zip"
 unzip -d phpmyadmin phpMyAdmin-latest-all-languages.zip
+rm phpMyAdmin-latest-all-languages.zip
 directory=$(pwd)
 cd phpmyadmin
 folder=$(ls)
