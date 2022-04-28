@@ -9,8 +9,15 @@ sudo mv phpinfo.php /var/www/html
 sudo apt install mariadb-server mariadb-client -y
 sudo service mysql stop
 sudo service mysql start
-sudo mysql_secure_installation
-sudo mysql -u root -p
+confirm=
+while [[ $confirm != "Y" && $confirm != "N" ]]; do
+  read -p "Enter MySQL config? (y/n): " confirm
+  confirm=${confirm^^}
+  if [[ $confirm == "Y" ]]; then
+    sudo mysql_secure_installation
+    sudo mysql -u root -p
+  fi
+done
 ############# use root user #############
 # ALTER USER 'root'@'localhost' IDENTIFIED BY 'password';
 # FLUSH PRIVILEGES;
