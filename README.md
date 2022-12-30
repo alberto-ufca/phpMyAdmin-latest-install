@@ -16,14 +16,14 @@ $ git clone https://github.com/meaar/phpMyAdmin-latest-install.git
 $ cd phpMyAdmin-latest-install
 
 # Change the phpMyAdmin.sh file permissions
-$ sudo chmod 777 phpMyAdmin.sh
+$ sudo chmod +x phpMyAdmin.sh
 
 # Run the script
 $ ./phpMyAdmin.sh
 ```
 **MySQL**
 ```mysql
-ALTER USER 'root'@'localhost' IDENTIFIED BY 'password';
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'yourpassword';
 FLUSH PRIVILEGES;
 EXIT;
 ```
