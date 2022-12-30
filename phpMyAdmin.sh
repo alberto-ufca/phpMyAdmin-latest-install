@@ -7,6 +7,10 @@ sudo apt install php libapache2-mod-php php-mysql php-mbstring php-xml -y
 echo "<?php phpinfo(); ?>" >> phpinfo.php
 sudo mv phpinfo.php /var/www/html
 sudo apt install mariadb-server mariadb-client -y
+file='/etc/mariadb'
+if [[ -e $file ]]; then
+   sudo cp $file '/etc/mysql'
+fi
 sudo service mysql stop
 sudo service mysql start
 confirm=
